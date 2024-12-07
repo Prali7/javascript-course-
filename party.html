@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    let age = prompt("Welcome! Please enter your age:");
+    if (age) {
+      age = parseInt(age);
+      if (age >= 18 && age <= 40) {
+        alert("Welcome to the party!");
+        let drinkOptions;
+        if (age >= 18 && age < 25) {
+          drinkOptions = "Coke";
+        } else if (age >= 25 && age < 35) {
+          drinkOptions = "Beer";
+        } else if (age >= 35 && age <= 40) {
+          drinkOptions = "Coke or Beer";
+        }
+        let drink = prompt(
+          `What would you like to drink? Options: ${drinkOptions}`
+        );
+        if (drink && drinkOptions.toLowerCase().includes(drink.toLowerCase())) {
+          alert(`Enjoy your ${drink}!`);
+        } else {
+          alert("Sorry, that's not a valid option.");
+        }
+      } else {
+        alert("Sorry, you are not allowed to enter the party.");
+      }
+    } else {
+      alert("Invalid input. Please enter a valid age.");
+    }
+
+  </script>
+</body>
+
+</html>

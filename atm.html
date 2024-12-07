@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let pin = prompt("Enter your pin");
+    if (pin == 1234) {
+      let amount = 10000;
+      let question = prompt("1.Check Balance 2.Withdraw");
+      if (question == 1) {
+        alert("Your balance is " + amount);
+      } else {
+       let namount = prompt("Enter the amount you want to withdraw");
+       if(namount<=amount){
+        let res =amount-namount;
+        alert("You have withdrawn"+namount+" and your balance is "+res);
+       }else{
+        alert("Insufficent balance");
+       }
+      }
+
+    } else {
+      alert("Invalid Pin");
+    }
+  </script>
+
+</body>
+
+</html>
